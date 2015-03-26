@@ -20,6 +20,6 @@ class Printer
 end
 
 puts Benchmark.measure {
-  words = WordSquare.new(5).solve
+  words = WordSquare.new(6).solve
   Printer.new(words).print
 }
