@@ -15,7 +15,7 @@ class Printer
   end
 
   def formatted_word(word)
-    word.split('').join(' ').upcase
+    word.split("").join(" ").upcase
   end
 end
 

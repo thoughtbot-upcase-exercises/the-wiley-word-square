@@ -42,14 +42,18 @@ class WordSquare
   end
 
   def last_prefix
+    next_letters_of_successful_words.join("") + wildcard_padding
+  end
+
+  def next_letters_of_successful_words
     length = successful_words.length
     successful_words.map { |word|
       word[length]
-    }.join("") + wildcard_padding(size - length)
+    }
   end
 
-  def wildcard_padding(number_of_wildcards)
-    ("*" * number_of_wildcards)
+  def wildcard_padding
+    ("*" * (size - successful_words.length))
   end
 
   def set_random_starting_word
